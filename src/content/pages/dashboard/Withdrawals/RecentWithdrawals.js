@@ -9,8 +9,8 @@ import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import DoneIcon from '@mui/icons-material/Done';
 import CloseIcon from '@mui/icons-material/Close';
 
-import { apiCall } from 'src/utils/axios';
-import { generateColFilters } from 'src/utils/table';
+// import { apiCall } from 'src/utils/axios';
+// import { generateColFilters } from 'src/utils/table';
 
 function RecentWithdrawals() {
   const columns = useMemo(
@@ -176,21 +176,10 @@ function RecentWithdrawals() {
   }, [columnFilters, globalFilter, pagination.pageIndex, pagination.pageSize, sorting]);
 
   const updateStatus = async (id, status) => {
-    const data = await apiCall('updateWithdrawalStatus', {
-      query: `mutation($id: [String]!, $status: String!){
-              updateWithdrawalStatus(_ids: $id, status: $status) {
-                body
-                success
-              }
-            }`,
-      variables: {
-        id: id,
-        status: status
-      }
-    });
-    if (data.success) {
-      fetchWithdrawals();
-    }
+    
+    // if (data.success) {
+    //   fetchWithdrawals();
+    // }
   };
 
   const handleAccept = ({ original: row }) => {

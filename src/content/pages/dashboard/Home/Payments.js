@@ -4,22 +4,9 @@ import { useMemo, useState, useEffect } from 'react';
 import { Card } from '@mui/material';
 import MaterialReactTable from 'material-react-table';
 
-import { apiCall } from 'src/utils/axios';
+// import { apiCall } from 'src/utils/axios';
 
 export default function Payments() {
-  // const [data, setData] = useState([]);
-  // const [isError, setIsError] = useState(false);
-  // const [isLoading, setIsLoading] = useState(false);
-  // const [isRefetching, setIsRefetching] = useState(false);
-  // const [rowCount, setRowCount] = useState(0);
-
-  // const [columnFilters, setColumnFilters] = useState([]);
-  // const [globalFilter, setGlobalFilter] = useState('');
-  // const [sorting, setSorting] = useState([]);
-  // const [pagination, setPagination] = useState({
-  //   pageIndex: 0,
-  //   pageSize: 5
-  // });
 
   const [payments, setPayments] = useState();
 
@@ -28,22 +15,7 @@ export default function Payments() {
   }, []);
 
   const fetchPayments = async () => {
-    const PaymentsData = await apiCall('getPaymentStatus', {
-      query: `query {
-      getPaymentStatus {
-        txhash
-        Address
-        ValueReceived    
-        PaymentWallet
-        NFTs
-        Status
-        User {
-          name
-        }
-      }
-    }`
-    });
-    setPayments(PaymentsData);
+    
   };
 
   const columns = useMemo(() => [

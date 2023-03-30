@@ -5,8 +5,8 @@ import MaterialReactTable from 'material-react-table';
 import { Box, Typography, Card, Tooltip, IconButton } from '@mui/material';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 
-import { apiCall } from 'src/utils/axios';
-import { generateColFilters } from 'src/utils/table';
+// import { apiCall } from 'src/utils/axios';
+// import { generateColFilters } from 'src/utils/table';
 
 const ViewHistoryModal = lazy(() => import('./ViewHistoryModel'));
 

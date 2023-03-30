@@ -5,8 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import { Box, Typography, Card, Tooltip, IconButton } from '@mui/material';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 
-import { apiCall } from 'src/utils/axios';
-import { generateColFilters } from 'src/utils/table';
+// import { apiCall } from 'src/utils/axios';
+// import { generateColFilters } from 'src/utils/table';
 
 function RecentUsers() {
   const navigate = useNavigate();

@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router';
-import { useDispatch } from 'react-redux';
+// import { useNavigate } from 'react-router';
+// import { useDispatch } from 'react-redux';
 import * as Yup from 'yup';
 import { useFormik, Form, FormikProvider } from 'formik';
 
@@ -9,13 +9,13 @@ import { LoadingButton } from '@mui/lab';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
-import { apiCall } from 'src/utils/axios';
+// import { apiCall } from 'src/utils/axios';
 
-import { setUser } from 'src/redux/user';
+// import { setUser } from 'src/redux/user';
 
 export default function LoginForm() {
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
+  // const dispatch = useDispatch();
+  // const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
   const [spinner, setSpinner] = useState(false);
 
@@ -35,38 +35,19 @@ export default function LoginForm() {
       try {
         setSpinner(true);
         formik.values.email = formik.values.email.toLowerCase();
-        const data = await apiCall('adminSignInAuth', {
-          query: `mutation($email: String!, $password: String!){
-            adminSignInAuth(email: $email, password: $password) {
-              body
-              success
-              admin {
-                designation
-                email
-                first_name
-                last_name
-                level
-              }
-            }
-          }`,
-          variables: {
-            email: formik.values.email,
-            password: formik.values.password
-          }
-        });
 
-        if (data.success) {
-          localStorage.setItem('TOKEN', data.body);
-          dispatch(setUser(data.admin));
-          navigate({ pathname: '/dashboard' });
-        } else {
-          if (data.body.match(/password/i)) {
-            setErrors({ password: data.body });
-          } else if (data.body.match(/email/i)) {
-            setErrors({ email: data.body });
-          }
-          setSpinner(false);
-        }
+        // if (data.success) {
+        //   localStorage.setItem('TOKEN', data.body);
+        //   dispatch(setUser(data.admin));
+        //   navigate({ pathname: '/dashboard' });
+        // } else {
+        //   if (data.body.match(/password/i)) {
+        //     setErrors({ password: data.body });
+        //   } else if (data.body.match(/email/i)) {
+        //     setErrors({ email: data.body });
+        //   }
+        //   setSpinner(false);
+        // }
       } catch (error) {
         console.log(error);
         setSpinner(false);

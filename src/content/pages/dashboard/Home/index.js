@@ -1,7 +1,7 @@
 import { lazy, useEffect, useState } from 'react';
 import { Grid, Container, Card, Typography, CardHeader } from '@mui/material';
 import { Box } from '@mui/system';
-import { apiCall } from 'src/utils/axios';
+// import { apiCall } from 'src/utils/axios';
 import Payments from './Payments';
 
 const Page = lazy(() => import('src/components/Page'));
@@ -16,20 +16,7 @@ function Home() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await apiCall('getTotalData', {
-        query: `query{  
-                  getTotalData {
-                    success
-                    totalUsers
-                    totalSoldNfts
-                    totalWithdrawalReq
-                    totalRevinew
-                  }
-              }`
-      });
-      if (response.success) {
-        setData(response);
-      }
+      
     };
 
     fetchData();

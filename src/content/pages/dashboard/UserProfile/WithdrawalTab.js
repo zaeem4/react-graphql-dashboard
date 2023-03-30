@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import { Table, TableBody, TableCell, TableHead, TableRow, TableContainer, Card } from '@mui/material';
 
-import { apiCall } from 'src/utils/axios';
+// import { apiCall } from 'src/utils/axios';
 import { useLocation } from 'react-router-dom';
 
 function WithdrawalTab() {
@@ -20,28 +20,10 @@ function WithdrawalTab() {
 
   const fetchWithdrawals = async () => {
     try {
-      const response = await apiCall('getUserWithdrawals', {
-        query: `query GetUserWithdrawals($email: String!) {
-            getUserWithdrawals(email: $email) {
-              success
-              withdrawals {
-                _id
-                date
-                coin
-                network
-                address
-                amount
-                status
-              }
-            }
-          }`,
-        variables: {
-          email: user.email
-        }
-      });
-      if (response.success) {
-        setData(response.withdrawals);
-      }
+      
+      // if (response.success) {
+      //   setData(response.withdrawals);
+      // }
     } catch (error) {
       console.log(error);
     }

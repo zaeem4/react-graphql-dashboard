@@ -6,16 +6,16 @@ import MaterialReactTable, {
   MRT_ToggleFiltersButton as ToggleFiltersButton
 } from 'material-react-table';
 
-import { convertArrayToCSV } from 'convert-array-to-csv';
+// import { convertArrayToCSV } from 'convert-array-to-csv';
 
 import { Box, Typography, Card, InputLabel, MenuItem, FormControl, Select, TextField, IconButton } from '@mui/material';
 
-import DownloadIcon from '@mui/icons-material/Download';
+// import DownloadIcon from '@mui/icons-material/Download';
 
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+// import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
-import { apiCall } from 'src/utils/axios';
-import { generateColFilters } from 'src/utils/table';
+// import { apiCall } from 'src/utils/axios';
+// import { generateColFilters } from 'src/utils/table';
 
 function RecentEnablers() {
   const eligibleUsersColumns = useMemo(

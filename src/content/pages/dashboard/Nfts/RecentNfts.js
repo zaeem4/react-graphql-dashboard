@@ -14,8 +14,8 @@ import DownloadIcon from '@mui/icons-material/Download';
 
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 
-import { apiCall } from 'src/utils/axios';
-import { generateColFilters } from 'src/utils/table';
+// import { apiCall } from 'src/utils/axios';
+// import { generateColFilters } from 'src/utils/table';
 
 function RecentNfts() {
   const unsoldnftsColumns = useMemo(
