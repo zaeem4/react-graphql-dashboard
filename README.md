@@ -1,8 +1,3 @@
-<p align="center">
-    <a href="https://visewealth.com/" title="Visewealth">
-        <img src="https://visewealth.com/images/VISEWEALTH-Logo.svg" alt="Visewealth Admin Dashboard">
-    </a>
-</p>
 
 <h2>
     Technical Support
